@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -46,7 +47,10 @@ def main():
             url = row['url']
             if url not in clones:
                 repo = Path(temp) / ('repo-' + str(len(clones)))
-                subprocess.run(['git', 'clone', '--depth', '1', '--quiet', url + '.git', str(repo)], check=True)
+                result = subprocess.run(['git', 'clone', '--depth', '1', '--quiet', url + '.git', str(repo)],
+                    capture_output=True, text=True, env={**os.environ, 'GIT_LFS_SKIP_SMUDGE': '1'})
+                if result.returncode:
+                    raise ValueError('Falha ao baixar a fonte oficial: ' + url)
                 clones[url] = repo
             repo = clones[url]
             source = (repo / row['path']).resolve()
