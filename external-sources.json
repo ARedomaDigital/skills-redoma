@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "id": "codebase-design",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/engineering/codebase-design",
+      "install": "upstream"
+    },
+    {
+      "id": "computer-use",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "diagnosing-bugs",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/engineering/diagnosing-bugs",
+      "install": "upstream"
+    },
+    {
+      "id": "domain-modeling",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/engineering/domain-modeling",
+      "install": "upstream"
+    },
+    {
+      "id": "faceless-explainer",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/faceless-explainer",
+      "install": "upstream"
+    },
+    {
+      "id": "figma",
+      "source": "OpenAI Skills",
+      "url": "https://github.com/openai/skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "frontend-app-builder",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "frontend-testing-debugging",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "google-docs",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "google-drive",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "google-drive-comments",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "google-sheets",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "google-slides",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "grilling",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/productivity/grilling",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-animation",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-animation",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-audio",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-audio",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-cli",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-cli",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-core",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-core",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-creative",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-creative",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-keyframes",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-keyframes",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-registry",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-registry",
+      "install": "upstream"
+    },
+    {
+      "id": "hyperframes-studio",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/hyperframes-studio",
+      "install": "upstream"
+    },
+    {
+      "id": "imagegen",
+      "source": "OpenAI Skills",
+      "url": "https://github.com/openai/skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "improve-codebase-architecture",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/engineering/improve-codebase-architecture",
+      "install": "upstream"
+    },
+    {
+      "id": "media-use",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/media-use",
+      "install": "upstream"
+    },
+    {
+      "id": "motion-graphics",
+      "source": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "path": "skills/motion-graphics",
+      "install": "upstream"
+    },
+    {
+      "id": "notion-database-designer",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "notion-knowledge-capture",
+      "source": "OpenAI Skills",
+      "url": "https://github.com/openai/skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "notion-research-documentation",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "notion-spec-to-implementation",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "openai-docs",
+      "source": "OpenAI Skills",
+      "url": "https://github.com/openai/skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "pdf",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "plugin-management",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "presentations",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "produce",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "react-best-practices",
+      "source": "Vercel",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "review-agent",
+      "source": "OpenAI Skills",
+      "url": "https://github.com/openai/skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "setup-matt-pocock-skills",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/engineering/setup-matt-pocock-skills",
+      "install": "upstream"
+    },
+    {
+      "id": "skill-creator",
+      "source": "OpenAI Skills",
+      "url": "https://github.com/openai/skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "skill-installer",
+      "source": "OpenAI Skills",
+      "url": "https://github.com/openai/skills",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "spreadsheets",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "tdd",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/engineering/tdd",
+      "install": "upstream"
+    },
+    {
+      "id": "teach",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/productivity/teach",
+      "install": "upstream"
+    },
+    {
+      "id": "triage",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/engineering/triage",
+      "install": "upstream"
+    },
+    {
+      "id": "visualize",
+      "source": "Plugin oficial ou fornecedor",
+      "url": "https://developers.openai.com/codex/plugins",
+      "install": "plugin-or-official"
+    },
+    {
+      "id": "writing-great-skills",
+      "source": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "path": "skills/productivity/writing-great-skills",
+      "install": "upstream"
+    }
+  ]
+}
