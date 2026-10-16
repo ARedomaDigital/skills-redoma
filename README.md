@@ -11,19 +11,17 @@ As skills gerais atualmente usadas na máquina de origem vêm de projetos extern
 ```powershell
 git clone https://github.com/Kellerr/skills-redoma.git
 cd skills-redoma
-python scripts/install_external.py --all
+.\update.cmd
 ```
 
-O instalador copia as skills diretamente de [Matt Pocock](https://github.com/mattpocock/skills) e [HyperFrames](https://github.com/heygen-com/hyperframes). Ele não executa código dessas skills. Instala na pasta `~/.agents/skills` e registra os arquivos instalados para permitir atualizações seguras.
+O comando atualiza o clone e copia as skills diretamente de [Matt Pocock](https://github.com/mattpocock/skills) e [HyperFrames](https://github.com/heygen-com/hyperframes). Ele não executa código dessas skills. Instala na pasta `~/.agents/skills` e registra os arquivos instalados para permitir atualizações seguras.
 
 ## Atualizar quando quiser
 
 Na pasta clonada, execute:
 
 ```powershell
-git pull --ff-only
-python scripts/install_external.py --all --update
-python scripts/install.py --all --update
+.\update.cmd
 ```
 
 O último comando instala as skills gerais originais da Redoma que forem adicionadas no futuro. Se uma skill tiver edição local, a atualização para e pede revisão, sem sobrescrevê-la.
