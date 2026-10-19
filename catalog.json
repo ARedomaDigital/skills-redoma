@@ -1,8 +1,53 @@
 {
   "discovery_had_inaccessible_paths": false,
-  "exported_versions": 0,
+  "exported_versions": 2,
   "schema_version": 1,
-  "skills": [],
-  "source_count": 0,
-  "unique_names": 0
+  "skills": [
+    {
+      "builtin": false,
+      "bytes": 10735,
+      "category": "ia-e-skills",
+      "dependencies": [],
+      "description": "Ensine e execute instalação, download, push e diagnóstico das skills Redoma nos dois repositórios, com linguagem para iniciantes e proteção de edições locais.",
+      "files": {
+        "SKILL.md": "fa3aaaf9552ca37862a629988b00621b808e684ea6a54cb76efe9a3ab2e5fe9d",
+        "references/operacao.md": "8b127a8cb9bf8a992c6e2b8d4f53f6dd36c15adfee24f392edc09c01836d7874"
+      },
+      "id": "redoma-tutorial",
+      "licenses": [],
+      "name": "redoma-tutorial",
+      "origin_types": [
+        "pessoal"
+      ],
+      "path": "skills/ia-e-skills/redoma-tutorial",
+      "sha256": "d2872bd1192e65f06c36f6b44a12f1f3826066fbc8f7cb933b80cbfd3d4dd731",
+      "source_count": 1,
+      "valid_metadata": true,
+      "variant": false
+    },
+    {
+      "builtin": false,
+      "bytes": 6026,
+      "category": "ia-e-skills",
+      "dependencies": [],
+      "description": "Receba novos integrantes da Redoma e configure o primeiro uso dos repositórios skills-redoma e skills-equipe no computador deles.",
+      "files": {
+        "SKILL.md": "d195f479d84127a263ee709a080cfe933cc7b62d9314d7c3cc26cd681af7b7d0",
+        "references/primeiro-acesso.md": "9392d3379c737edfb89f5b48b759ff285fa849f7a9e01fc01d352a89882c86bf"
+      },
+      "id": "redoma-welcoming",
+      "licenses": [],
+      "name": "redoma-welcoming",
+      "origin_types": [
+        "pessoal"
+      ],
+      "path": "skills/ia-e-skills/redoma-welcoming",
+      "sha256": "65281d91f6605e00cb80d261ca1d6a71336ffe0b275ad90d2f9b2baa42d11b92",
+      "source_count": 1,
+      "valid_metadata": true,
+      "variant": false
+    }
+  ],
+  "source_count": 2,
+  "unique_names": 2
 }

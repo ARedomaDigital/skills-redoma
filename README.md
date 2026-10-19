@@ -1,6 +1,6 @@
 # Skills gerais da Redoma
 
-Este é o link público para compartilhar com a equipe: **https://github.com/Kellerr/skills-redoma**.
+Este é o link público para compartilhar com a equipe: **https://github.com/ARedomaDigital/skills-redoma**.
 
 As skills gerais atualmente usadas na máquina de origem vêm de projetos externos. Este repositório aponta para as fontes oficiais e oferece um instalador para as 22 skills obtidas diretamente de dois projetos no GitHub. Componentes do Codex e de plugins são instalados pelos respectivos fornecedores. Skills de clientes ficam em outro repositório, privado.
 
@@ -9,7 +9,7 @@ As skills gerais atualmente usadas na máquina de origem vêm de projetos extern
 É preciso ter [Git](https://git-scm.com/downloads) e [Python](https://www.python.org/downloads/). Abra o PowerShell:
 
 ```powershell
-git clone https://github.com/Kellerr/skills-redoma.git
+git clone https://github.com/ARedomaDigital/skills-redoma.git
 cd skills-redoma
 .\update.cmd
 ```
@@ -36,3 +36,12 @@ O último comando instala as skills gerais originais da Redoma que forem adicion
 Para as skills do Codex e dos plugins, consulte [OpenAI Skills](https://github.com/openai/skills) e a [documentação de plugins do Codex](https://developers.openai.com/codex/plugins). Cada integrante conecta suas próprias contas e serviços.
 
 O repositório público começa com histórico independente. Nunca inclua nele arquivos, contexto ou instruções de clientes.
+
+## Comece por aqui
+
+- [Boas-vindas e configuração do computador](skills/ia-e-skills/redoma-welcoming/SKILL.md)
+- [Tutorial: baixar, enviar e resolver dúvidas](skills/ia-e-skills/redoma-tutorial/SKILL.md)
+- [Prompt pronto para o primeiro acesso](skills/ia-e-skills/redoma-welcoming/references/primeiro-acesso.md)
+- [Biblioteca interna da equipe, com acesso privado](https://github.com/ARedomaDigital/skills-equipe)
+
+Cada integrante precisa de acesso aos dois repositórios. O privado exige convite; enviar alterações exige escrita. Os três computadores compartilham os destinos, mas cada um tem configuração, recibos e credenciais próprios.
