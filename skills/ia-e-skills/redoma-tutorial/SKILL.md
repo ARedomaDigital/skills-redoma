@@ -34,3 +34,11 @@ A rotina `library.py sync --push` exporta fontes locais e envia; ela não faz so
 Ao baixar, confira os dois clones e os arquivos instalados. Ao enviar, confira o commit remoto de cada destino; se um falhar depois de o outro concluir, registre o resultado parcial e não repita o envio bem-sucedido sem necessidade. Ao diagnosticar, informe o erro e a próxima ação específica. Não declare configuração dos três computadores a partir de um único teste local.
 
 Para economizar tokens, carregue apenas o catálogo, a política e a skill envolvida. Ler todos os corpos das skills não é necessário para conferir versões.
+
+## Testes e relatorio final de erro
+
+Regra do usuario em 20/10/2026: em todo envio ou atualizacao da biblioteca, executar os testes automatizados antes da publicacao. A rotina library.py aplica essa verificacao antes de Git/rede; testes reprovados interrompem o envio. Toda correcao de bug deve incluir regressao que falhe antes e passe depois, cobrindo o comportamento real.
+
+Toda falha deve gerar e exibir um log final com etapa, causa sem credenciais, efeito no envio e proxima acao. Salvar .local/last-error.json, .local/errors.jsonl e um arquivo por evento em .local/errors/. Se o disco nao permitir gravar, manter o relatorio no terminal e informar a falha de gravacao. Na resposta final ao usuario, incluir o erro e o caminho do log; nao ocultar esse relato por haver outra entrega concluida.
+
+Quando o controle diario pular um dia cuja tentativa falhou, emitir o erro anterior como lembrete, sem repetir Git/rede. Detalhes e limites estao em references/operacao.md. Nunca prometer ausencia universal de falhas: testar os cenarios conhecidos e tornar falhas futuras observaveis.

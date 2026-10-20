@@ -241,6 +241,12 @@
       "install": "plugin-or-official"
     },
     {
+      "id": "refero-styles",
+      "source": "Third-party package; upstream pending verification",
+      "url": "",
+      "install": "manual-origin-pending"
+    },
+    {
       "id": "review-agent",
       "source": "OpenAI Skills",
       "url": "https://github.com/openai/skills",
@@ -272,6 +278,12 @@
       "install": "plugin-or-official"
     },
     {
+      "id": "svg-diagram",
+      "source": "Third-party package; upstream pending verification",
+      "url": "",
+      "install": "manual-origin-pending"
+    },
+    {
       "id": "tdd",
       "source": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
@@ -291,6 +303,12 @@
       "url": "https://github.com/mattpocock/skills",
       "path": "skills/engineering/triage",
       "install": "upstream"
+    },
+    {
+      "id": "video-use",
+      "source": "Third-party package; upstream pending verification",
+      "url": "",
+      "install": "manual-origin-pending"
     },
     {
       "id": "visualize",

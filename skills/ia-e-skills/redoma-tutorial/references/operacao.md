@@ -95,3 +95,15 @@ Enquanto não existir um executor testado do fluxo completo, use a skill para o 
 | Skill de plugin não executa | Instalar o plugin e conectar a conta do próprio integrante. |
 
 Verificação do Codex: [documentação oficial sobre skills](https://learn.chatgpt.com/docs/build-skills). Ele descobre skills pessoais em `.agents/skills`; mudanças costumam ser detectadas automaticamente. Se não aparecerem, reinicie o aplicativo. Consulte também `.codex/skills` por convenção da equipe, evitando duplicar o mesmo nome.
+
+## Verificacao automatica e log de falhas
+
+Antes de cada sincronizacao efetiva, library.py roda test_library.py e test_install.py por unittest, sem rede. Falha ou timeout de testes interrompe o fluxo antes de Git/rede. O resultado dos testes integra o recibo de sucesso; nao substituir por uma afirmacao manual de que tudo passou.
+
+O pacote IANA tzdata pode estar instalado em um perfil inacessivel ao processo protegido. library.py tenta o provedor normal e depois .local/tzdata/zoneinfo. Preparar essa copia a partir de um pacote confiavel, sem alterar permissoes. Atualiza-la junto com tzdata. Nao substituir silenciosamente America/Sao_Paulo por um deslocamento fixo.
+
+Para terceiros, declarar external na politica e registrar a fonte no manifesto. Se a origem exata ainda for desconhecida, usar manual-origin-pending e deixar essa limitacao explicita; nao inventar URL nem copiar o conteudo para o repositorio publico.
+
+Em cada erro, o terminal emite final_log com identificador do evento, etapa, causa sanitizada, proxima acao e indicacao de lembrete. Sao mantidos .local/last-error.json, .local/errors.jsonl e .local/errors/<evento>.json, fora do Git. Se gravacao falhar, log_write_errors aparece no terminal junto do erro original. O agente deve reproduzir um resumo na resposta final e apontar um arquivo acessivel. Uma falha de outro programa, encerramento forcado do processo ou indisponibilidade total do terminal pode impedir a emissao; nao prometer cobertura universal.
+
+Uma chamada diaria pulada com previous_ok=false emite lembrete do erro anterior, nao executa sincronizacao e nao deve ser descrita como sucesso. Uma falha nova exige teste de regressao antes da correcao. Incluir cenarios de fuso, classificacao, falha de testes, marcador diario, credenciais nos logs e erro ao salvar logs.
