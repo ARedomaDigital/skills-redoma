@@ -6,6 +6,9 @@ from pathlib import Path
 import shutil
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import release_approval
+
 ROOT = Path(__file__).resolve().parents[1]
 RECEIPT = '.skills-equipe-install.json'
 
@@ -42,6 +45,7 @@ def resolve_group(identifier, catalog, aliases, include_dependencies=True):
 
 
 def preflight(entries, destination, update):
+    release_approval.require(entries, ROOT / 'skill-approvals.json')
     destination = destination.expanduser().resolve()
     actions = []
     for entry in entries:
@@ -94,7 +98,9 @@ def install_group(entries, destination, update=False):
             shutil.copy2(source / relative, output)
         if hashes(target) != entry['files']:
             raise ValueError('Falha na verificação da instalação: ' + entry['id'])
-        receipt = {'id': entry['id'], 'sha256': entry['sha256'], 'files': entry['files']}
+        approval = release_approval.filtered(release_approval.read_manifest(ROOT / 'skill-approvals.json'), [entry])
+        receipt = {'id': entry['id'], 'sha256': entry['sha256'], 'files': entry['files'],
+                   'approval': approval['approvals'][0]}
         (target / RECEIPT).write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
     return [entry['id'] for entry, source, target, receipt in actions]
 

@@ -1,0 +1,25 @@
+{
+  "approvals": [
+    {
+      "approved_at": "2026-10-20T21:42:25.799854+00:00",
+      "approved_by": "Usuario responsavel Redoma",
+      "creator": "Usuario responsavel Redoma",
+      "evidence": "Aprovacao humana explicita em lote pelo usuario em 20/10/2026 no chat 01a15a7b-ddf5-7c42-a32d-c0a5a56b797d: Todas as skills que sao as previas, elas ja estao aprovadas. Eu ja aprovei todas elas. Eu quero que voce considere todas elas aprovadas. Escopo: versoes atuais pendentes, hashes conferidos no registro.",
+      "kind": "explicit-human",
+      "sha256": "168a926f3148fcba58f1c1949725e956eb60657033b1cf0b59f839a1a98275f5",
+      "skill": "redoma-tutorial",
+      "status": "approved"
+    },
+    {
+      "approved_at": "2026-10-20T21:42:28.438951+00:00",
+      "approved_by": "Usuario responsavel Redoma",
+      "creator": "Usuario responsavel Redoma",
+      "evidence": "Aprovacao humana explicita em lote pelo usuario em 20/10/2026 no chat 01a15a7b-ddf5-7c42-a32d-c0a5a56b797d: Todas as skills que sao as previas, elas ja estao aprovadas. Eu ja aprovei todas elas. Eu quero que voce considere todas elas aprovadas. Escopo: versoes atuais pendentes, hashes conferidos no registro.",
+      "kind": "explicit-human",
+      "sha256": "65281d91f6605e00cb80d261ca1d6a71336ffe0b275ad90d2f9b2baa42d11b92",
+      "skill": "redoma-welcoming",
+      "status": "approved"
+    }
+  ],
+  "schema_version": 1
+}

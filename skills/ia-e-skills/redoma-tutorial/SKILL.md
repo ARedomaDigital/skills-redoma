@@ -29,6 +29,10 @@ Compare mudanças antes de atualizar. Não resolva divergências por data do arq
 
 A rotina `library.py sync --push` exporta fontes locais e envia; ela não faz sozinha o caminho completo de recebimento e instalação. Não descreva esse comando como sincronização bidirecional. Leia seu comportamento atual antes de usá-lo em um computador novo, especialmente a exigência de fontes completas e a política de distribuição.
 
+## Aprovacao antes de enviar
+
+Toda criacao ou alteracao fica em teste local ate aprovacao humana explicita do criador/responsavel. Testes e feedback sobre uma imagem nao aprovam automaticamente a skill. Nao autoaprovar. A decisao vale para o hash exato dos arquivos; qualquer edicao exige nova decisao. Leia [o fluxo de aprovacao](references/aprovacao.md) antes de enviar ou distribuir instalacoes. A rotina diaria deve respeitar essa trava.
+
 ## Como concluir
 
 Ao baixar, confira os dois clones e os arquivos instalados. Ao enviar, confira o commit remoto de cada destino; se um falhar depois de o outro concluir, registre o resultado parcial e não repita o envio bem-sucedido sem necessidade. Ao diagnosticar, informe o erro e a próxima ação específica. Não declare configuração dos três computadores a partir de um único teste local.

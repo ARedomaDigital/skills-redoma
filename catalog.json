@@ -5,12 +5,13 @@
   "skills": [
     {
       "builtin": false,
-      "bytes": 13631,
+      "bytes": 16509,
       "category": "ia-e-skills",
       "dependencies": [],
       "description": "Ensine e execute instalação, download, push e diagnóstico das skills Redoma nos dois repositórios, com linguagem para iniciantes e proteção de edições locais.",
       "files": {
-        "SKILL.md": "d90fdef196395b48b4207cf9bace3904c3cbbf8f2117571e8c54239764166808",
+        "SKILL.md": "9ec7be5a5eb8214d0359d615f89a8c018843e2b25c9b69348c9521f809e0e70c",
+        "references/aprovacao.md": "5e23c1b0a15f7a33fbbdcdeb90174fc1a88cc108a1f948961c73ab16b6348e49",
         "references/operacao.md": "aedff067aa642b9f4b965b29db3f5485f9a6d4ba3b0b01a79627b608e506542c"
       },
       "id": "redoma-tutorial",
@@ -20,7 +21,7 @@
         "pessoal"
       ],
       "path": "skills/ia-e-skills/redoma-tutorial",
-      "sha256": "3c2c68c912b589710ac2a0e13aca016eda8accdcd447842476f0c33e70fb41fb",
+      "sha256": "168a926f3148fcba58f1c1949725e956eb60657033b1cf0b59f839a1a98275f5",
       "source_count": 1,
       "valid_metadata": true,
       "variant": false
