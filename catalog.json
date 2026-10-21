@@ -28,22 +28,22 @@
     },
     {
       "builtin": false,
-      "bytes": 6026,
+      "bytes": 15799,
       "category": "ia-e-skills",
       "dependencies": [],
-      "description": "Receba novos integrantes da Redoma e configure o primeiro uso dos repositórios skills-redoma e skills-equipe no computador deles.",
+      "description": "Apresente a biblioteca Redoma a iniciantes que colaram seu link na IA; mostre recursos reais, configure o primeiro uso e ensine a utilizar e contribuir com skills e código compartilhados.",
       "files": {
-        "SKILL.md": "d195f479d84127a263ee709a080cfe933cc7b62d9314d7c3cc26cd681af7b7d0",
-        "references/primeiro-acesso.md": "9392d3379c737edfb89f5b48b759ff285fa849f7a9e01fc01d352a89882c86bf"
+        "SKILL.md": "4763f1526c7ac0b92e61f0185ae269148a2435e0a80f220f00095ddaf56a45cf",
+        "references/primeiro-acesso.md": "a5d25644c2007beceee463be796bbb9f715ee1d1ae6b540f36100bf81271c27b"
       },
-      "id": "redoma-welcoming",
+      "id": "redoma-welcoming-mk5",
       "licenses": [],
-      "name": "redoma-welcoming",
+      "name": "redoma-welcoming-mk5",
       "origin_types": [
         "pessoal"
       ],
-      "path": "skills/ia-e-skills/redoma-welcoming",
-      "sha256": "65281d91f6605e00cb80d261ca1d6a71336ffe0b275ad90d2f9b2baa42d11b92",
+      "path": "skills/ia-e-skills/redoma-welcoming-mk5",
+      "sha256": "2c158e6d51499356e00a003720760e97e6cacfc2bae70b33c3d34f5ddbf86899",
       "source_count": 1,
       "valid_metadata": true,
       "variant": false

@@ -11,13 +11,13 @@
       "status": "approved"
     },
     {
-      "approved_at": "2026-10-20T21:42:28.438951+00:00",
-      "approved_by": "Usuario responsavel Redoma",
-      "creator": "Usuario responsavel Redoma",
-      "evidence": "Aprovacao humana explicita em lote pelo usuario em 20/10/2026 no chat 01a15a7b-ddf5-7c42-a32d-c0a5a56b797d: Todas as skills que sao as previas, elas ja estao aprovadas. Eu ja aprovei todas elas. Eu quero que voce considere todas elas aprovadas. Escopo: versoes atuais pendentes, hashes conferidos no registro.",
+      "approved_at": "2026-10-21T13:54:16.665417+00:00",
+      "approved_by": "Lucas",
+      "creator": "Lucas",
+      "evidence": "Chat local 01a15e9b-1c28-7a83-ae1a-71f1577aaf71, 21/10/2026. Mensagem humana literal de Lucas: APROVO redoma-welcoming-mk5 2c158e6d51499356e00a003720760e97e6cacfc2bae70b33c3d34f5ddbf86899. Decisao especifica desta versao; nenhuma outra skill foi aprovada.",
       "kind": "explicit-human",
-      "sha256": "65281d91f6605e00cb80d261ca1d6a71336ffe0b275ad90d2f9b2baa42d11b92",
-      "skill": "redoma-welcoming",
+      "sha256": "2c158e6d51499356e00a003720760e97e6cacfc2bae70b33c3d34f5ddbf86899",
+      "skill": "redoma-welcoming-mk5",
       "status": "approved"
     }
   ],

@@ -39,9 +39,9 @@ O repositório público começa com histórico independente. Nunca inclua nele a
 
 ## Comece por aqui
 
-- [Boas-vindas e configuração do computador](skills/ia-e-skills/redoma-welcoming/SKILL.md)
+- [Boas-vindas e configuração do computador](skills/ia-e-skills/redoma-welcoming-mk5/SKILL.md)
 - [Tutorial: baixar, enviar e resolver dúvidas](skills/ia-e-skills/redoma-tutorial/SKILL.md)
-- [Prompt pronto para o primeiro acesso](skills/ia-e-skills/redoma-welcoming/references/primeiro-acesso.md)
+- [Prompt pronto para o primeiro acesso](skills/ia-e-skills/redoma-welcoming-mk5/references/primeiro-acesso.md)
 - [Biblioteca interna da equipe, com acesso privado](https://github.com/ARedomaDigital/skills-equipe)
 
 Cada integrante precisa de acesso aos dois repositórios. O privado exige convite; enviar alterações exige escrita. Os três computadores compartilham os destinos, mas cada um tem configuração, recibos e credenciais próprios.
