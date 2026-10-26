@@ -8,6 +8,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import release_approval
+import configure_hub
 
 ROOT = Path(__file__).resolve().parents[1]
 RECEIPT = '.skills-equipe-install.json'
@@ -109,11 +110,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('id', nargs='?')
     parser.add_argument('--list', action='store_true')
-    parser.add_argument('--dest', type=Path, default=Path.home() / '.agents' / 'skills')
+    parser.add_argument('--dest', type=Path)
+    parser.add_argument('--profile-home', type=Path, default=Path.home(), help='Perfil local para configurar Codex e Claude juntos.')
+    parser.add_argument('--no-shared-context', action='store_true', help='Instala apenas os arquivos, sem configurar o perfil.')
     parser.add_argument('--update', action='store_true')
     parser.add_argument('--all', action='store_true', help='Instala todas as skills deste repositório.')
     parser.add_argument('--no-deps', action='store_true')
     args = parser.parse_args()
+    if args.dest is None:
+        args.dest = args.profile_home / '.agents' / 'skills'
     catalog = json.loads((ROOT / 'catalog.json').read_text(encoding='utf-8'))
     policy_path = ROOT / 'collection-policy.json'
     policy = json.loads(policy_path.read_text(encoding='utf-8')) if policy_path.exists() else {}
@@ -130,7 +135,16 @@ def main():
             parser.error('Informe um identificador ou use --all.')
         entries = resolve_group(args.id, catalog, policy.get('aliases', {}), not args.no_deps)
     installed = install_group(entries, args.dest, args.update)
-    print(json.dumps({'installed_or_updated': installed, 'already_current': len(entries) - len(installed)}, ensure_ascii=True))
+    result = {'installed_or_updated': installed, 'already_current': len(entries) - len(installed)}
+    try:
+        result['shared_context'] = ({'applied': False, 'reason': 'explicit-opt-out'} if args.no_shared_context
+                                    else configure_hub.after_install(args.dest, args.profile_home))
+    except (OSError, ValueError) as error:
+        result['shared_context'] = {'ok': False, 'error': str(error), 'stage': 'shared-context-setup',
+                                    'next_action': 'Preserve installed skills; resolve access or conflicting instruction files and run configure_hub.py.'}
+        print(json.dumps(result, ensure_ascii=True))
+        return 1
+    print(json.dumps(result, ensure_ascii=True))
     return 0
 
 

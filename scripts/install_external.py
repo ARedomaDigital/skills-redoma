@@ -7,6 +7,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import tempfile
+import configure_hub
 
 ROOT = Path(__file__).resolve().parents[1]
 RECEIPT = '.skills-redoma-install.json'
@@ -28,8 +29,12 @@ def main():
     parser.add_argument('--all', action='store_true')
     parser.add_argument('--list', action='store_true')
     parser.add_argument('--update', action='store_true')
-    parser.add_argument('--dest', type=Path, default=Path.home() / '.agents' / 'skills')
+    parser.add_argument('--dest', type=Path)
+    parser.add_argument('--profile-home', type=Path, default=Path.home())
+    parser.add_argument('--no-shared-context', action='store_true')
     args = parser.parse_args()
+    if args.dest is None:
+        args.dest = args.profile_home / '.agents' / 'skills'
     rows = json.loads((ROOT / 'external-sources.json').read_text(encoding='utf-8'))['skills']
     eligible = {row['id']: row for row in rows if row['install'] == 'upstream'}
     if args.list:
@@ -90,8 +95,17 @@ def main():
             (target / RECEIPT).write_text(json.dumps({'url': row['url'], 'path': row['path'],
                 'commit': subprocess.check_output(['git', '-C', str(source), 'rev-parse', 'HEAD'], text=True).strip(),
                 'files': new_files}, indent=2) + '\n', encoding='utf-8')
-    print(json.dumps({'installed_or_updated': [row['id'] for row, *_ in actions],
-                      'already_current': len(selected) - len(actions)}, ensure_ascii=False))
+    result = {'installed_or_updated': [row['id'] for row, *_ in actions],
+              'already_current': len(selected) - len(actions)}
+    try:
+        result['shared_context'] = ({'applied': False, 'reason': 'explicit-opt-out'} if args.no_shared_context
+                                   else configure_hub.after_install(args.dest, args.profile_home))
+    except (OSError, ValueError) as error:
+        result['shared_context'] = {'ok': False, 'error': str(error), 'stage': 'shared-context-setup',
+                                    'next_action': 'Preserve installed skills; resolve access or conflicting instruction files and run configure_hub.py.'}
+        print(json.dumps(result, ensure_ascii=True))
+        raise SystemExit(1)
+    print(json.dumps(result, ensure_ascii=False))
 
 
 if __name__ == '__main__':

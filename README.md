@@ -45,3 +45,36 @@ O repositório público começa com histórico independente. Nunca inclua nele a
 - [Biblioteca interna da equipe, com acesso privado](https://github.com/ARedomaDigital/skills-equipe)
 
 Cada integrante precisa de acesso aos dois repositórios. O privado exige convite; enviar alterações exige escrita. Os três computadores compartilham os destinos, mas cada um tem configuração, recibos e credenciais próprios.
+
+## Codex e Claude com a mesma base local
+
+A instalacao de skills agora configura automaticamente o contexto compartilhado,
+independentemente de qual assistente local executou o comando. Use normalmente
+`python scripts/install.py --all --update`; o instalador de fontes externas
+`python scripts/install_external.py --all --update` faz a mesma configuracao.
+
+- `~/.codex/hub/REDOMA.md`: orientacoes comuns aos agentes locais.
+- `~/.codex/hub/CURRENT_CONTEXT.md`: estado resumido para continuar o trabalho.
+- `~/.codex/AGENTS.md` e `~/.claude/CLAUDE.md`: entradas para essa base.
+- `~/.agents/skills`: arquivos instalados compartilhados. No Claude, atalhos de
+  diretorio em `~/.claude/skills` apontam para os mesmos arquivos, inclusive as
+  skills legadas de `~/.codex/skills` quando existirem.
+- `~/.codex/hub/llm-roots.json`: caminhos e conflitos encontrados neste perfil.
+
+Regras pessoais e contexto existente sao mantidos; arquivos de instrucoes
+alterados recebem backup local. Skills divergentes no Claude nao sao trocadas:
+consulte `shared_context.conflicts` no resultado. Uma segunda execucao nao
+duplica os apontadores. O instalador nao altera settings, contas ou permissoes.
+
+Para configurar quem ja tem as skills, execute `python scripts/configure_hub.py`.
+Use `--check` para simular; `--home CAMINHO` para um perfil isolado. Destinos
+personalizados de skills nao alteram o perfil global automaticamente. Para
+instalacao so de arquivos, use `--no-shared-context`. Reinicie a sessao local e
+confira a descoberta das skills; o instalador verifica os caminhos no disco.
+
+A ponte compartilha arquivos locais, nao o historico interno dos chats nem as
+conexoes dos aplicativos. Claude Code local e Codex local tem entradas prontas;
+outras ferramentas precisam ler a mesma base pelo mecanismo que suportarem.
+Apps na nuvem nao passam a ler este computador. As atualizacoes entre PCs
+continuam pelo GitHub: cada colaborador precisa receber a versao do instalador.
+Nao ha copia do contexto pessoal para o repositorio nem servico em segundo plano.
