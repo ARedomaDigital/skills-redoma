@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import tempfile
 import configure_hub
+import events_install
 
 ROOT = Path(__file__).resolve().parents[1]
 RECEIPT = '.skills-redoma-install.json'
@@ -32,6 +33,7 @@ def main():
     parser.add_argument('--dest', type=Path)
     parser.add_argument('--profile-home', type=Path, default=Path.home())
     parser.add_argument('--no-shared-context', action='store_true')
+    parser.add_argument('--enable-events', action='store_true', help='Windows: enroll the persistent receiver with a one-use invitation.')
     args = parser.parse_args()
     if args.dest is None:
         args.dest = args.profile_home / '.agents' / 'skills'
@@ -105,6 +107,20 @@ def main():
                                     'next_action': 'Preserve installed skills; resolve access or conflicting instruction files and run configure_hub.py.'}
         print(json.dumps(result, ensure_ascii=True))
         raise SystemExit(1)
+    result['event_receiver'] = events_install.status(args.profile_home)
+    if args.enable_events:
+        if args.profile_home.expanduser().resolve() != Path.home().resolve():
+            raise ValueError('Persistent enrollment is allowed only for the current Windows profile.')
+        import subprocess
+        service = result['event_receiver']
+        endpoint = service.get('endpoint')
+        if not endpoint:
+            endpoint = json.loads((ROOT / 'scripts/skills-events.json').read_text(encoding='utf-8'))['endpoint']
+        setup = subprocess.run(['powershell', '-NoProfile', '-File', str(ROOT/'scripts/setup-skills-events.ps1'),
+                                '-Endpoint', endpoint, '-RepositoryRoot', str(ROOT)],
+                               env={k:v for k,v in __import__('os').environ.items() if k.upper()!='PSMODULEPATH'})
+        if setup.returncode: raise ValueError('Receiver enrollment failed; installed skills were preserved.')
+        result['event_receiver'] = events_install.status(args.profile_home)
     print(json.dumps(result, ensure_ascii=False))
 
 

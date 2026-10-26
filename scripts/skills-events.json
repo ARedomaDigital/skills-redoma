@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "endpoint": "https://redoma-skills-events.trolcidanos.workers.dev",
+  "setup": "setup-skills-events.ps1",
+  "enrollment": "one-use-invitation"
+}

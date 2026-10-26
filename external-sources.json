@@ -2,6 +2,69 @@
   "schema_version": 1,
   "skills": [
     {
+      "id": "agents-sdk",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/agents-sdk",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "basin",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/basin",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "cf-cli",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/cf-cli",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "cloudflare",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/cloudflare",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "cloudflare-email-service",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/cloudflare-email-service",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "cloudflare-one",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/cloudflare-one",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "cloudflare-one-migrations",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/cloudflare-one-migrations",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
       "id": "codebase-design",
       "source": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
@@ -29,6 +92,15 @@
       "install": "upstream"
     },
     {
+      "id": "durable-objects",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/durable-objects",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
       "id": "faceless-explainer",
       "source": "heygen-com/hyperframes",
       "url": "https://github.com/heygen-com/hyperframes",
@@ -52,6 +124,15 @@
       "source": "Plugin oficial ou fornecedor",
       "url": "https://developers.openai.com/codex/plugins",
       "install": "plugin-or-official"
+    },
+    {
+      "id": "gateway-workers",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/gateway-workers",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
     },
     {
       "id": "google-docs",
@@ -167,6 +248,15 @@
       "install": "upstream"
     },
     {
+      "id": "k2",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/k2",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
       "id": "media-use",
       "source": "heygen-com/hyperframes",
       "url": "https://github.com/heygen-com/hyperframes",
@@ -179,6 +269,15 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "path": "skills/motion-graphics",
       "install": "upstream"
+    },
+    {
+      "id": "nextjs-on-cloudflare",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/nextjs-on-cloudflare",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
     },
     {
       "id": "notion-database-designer",
@@ -253,6 +352,33 @@
       "install": "plugin-or-official"
     },
     {
+      "id": "sandbox-migrate-to-next",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/sandbox-migrate-to-next",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "sandbox-next",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/sandbox-next",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "sandbox-stable",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/sandbox-stable",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
       "id": "setup-matt-pocock-skills",
       "source": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
@@ -305,6 +431,15 @@
       "install": "upstream"
     },
     {
+      "id": "turnstile-spin",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/turnstile-spin",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
       "id": "video-use",
       "source": "Third-party package; upstream pending verification",
       "url": "",
@@ -315,6 +450,42 @@
       "source": "Plugin oficial ou fornecedor",
       "url": "https://developers.openai.com/codex/plugins",
       "install": "plugin-or-official"
+    },
+    {
+      "id": "web-perf",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/web-perf",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "workers-best-practices",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/workers-best-practices",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "workers-profiling",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/workers-profiling",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
+    },
+    {
+      "id": "wrangler",
+      "source": "cloudflare/skills",
+      "url": "https://github.com/cloudflare/skills",
+      "path": "skills/wrangler",
+      "install": "upstream",
+      "license": "Apache-2.0",
+      "verified_at": "2026-10-26"
     },
     {
       "id": "writing-great-skills",
